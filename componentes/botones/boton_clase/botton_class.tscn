@@ -1,6 +1,19 @@
-[gd_scene format=3 uid="uid://ccd7whc8gy4yy"]
+[gd_scene load_steps=3 format=3 uid="uid://ccd7whc8gy4yy"]
+
+[ext_resource type="Script" uid="uid://c1fpbb7dqws0b" path="res://componentes/botones/boton_clase/button_class.gd" id="1_dbae6"]
+[ext_resource type="Texture2D" uid="uid://uteiwmrltdhy" path="res://assets/botones_sprites/o_icon.png" id="2_xoiqf"]
 
 [node name="BottonClass" type="Button"]
 custom_minimum_size = Vector2(128, 128)
-offset_right = 8.0
-offset_bottom = 8.0
+offset_right = 136.0
+offset_bottom = 136.0
+icon = ExtResource("2_xoiqf")
+script = ExtResource("1_dbae6")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(64, 64)
+texture = ExtResource("2_xoiqf")
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

@@ -25,7 +25,7 @@ func _ready():
 	check_match(tablero)
 	# print('check',tablero[check_match(tablero)[2].y][check_match(tablero)[2].x])
 	# print_figura(check_match(tablero)[2].x, check_match(tablero)[2].y)
-
+	populate_grid_container()
 	pass
 
 
@@ -63,3 +63,30 @@ func check_match(_tablero):
 	else:
 		print("matches:", matches)
 		return matches
+
+
+func populate_grid_container()->void:
+	# random
+	var triangle:Resource = preload("res://componentes/botones/triangle_btn/triangle_btn.tscn")
+	var circle:Resource = preload("res://componentes/botones/circle_btn/circle_btn.tscn")
+	var cross:Resource = preload("res://componentes/botones/cross_btn/cross_btn.tscn")
+
+
+	var grid_container:= get_node("GridContainer")
+
+	for slot in range(grid_container.get_child_count()):
+		var rng := RandomNumberGenerator.new()
+		var number = rng.randi_range(0,2)
+		var instance: Node
+		match number:
+			0:
+				instance = triangle.instantiate()
+			1:
+				instance = circle.instantiate()
+			2:
+				instance = cross.instantiate()
+				
+			_:
+				pass
+		grid_container.get_child(slot).add_child(instance)	
+	pass

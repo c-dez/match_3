@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://sa30f05qlxjv"]
+
+[ext_resource type="PackedScene" uid="uid://ccd7whc8gy4yy" path="res://componentes/botones/boton_clase/botton_class.tscn" id="1_csmsp"]
+[ext_resource type="Texture2D" uid="uid://b7r12qrropbe3" path="res://assets/botones_sprites/triangle_icon.png" id="2_7l6qn"]
+[ext_resource type="Script" uid="uid://dwj4tce716lnu" path="res://componentes/botones/triangle_btn/triangle_btn.gd" id="3_gwhcw"]
+
+[node name="TriangleBtn" instance=ExtResource("1_csmsp")]
+icon = ExtResource("2_7l6qn")
+script = ExtResource("3_gwhcw")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_7l6qn")

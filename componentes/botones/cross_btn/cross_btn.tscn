@@ -1,0 +1,12 @@
+[gd_scene load_steps=4 format=3 uid="uid://cvs36723p1pvv"]
+
+[ext_resource type="PackedScene" uid="uid://ccd7whc8gy4yy" path="res://componentes/botones/boton_clase/botton_class.tscn" id="1_6me35"]
+[ext_resource type="Script" uid="uid://du4mvrpwmeuun" path="res://componentes/botones/cross_btn/cross_btn.gd" id="2_ap3n4"]
+[ext_resource type="Texture2D" uid="uid://c0f0wjcxocfhs" path="res://assets/botones_sprites/x_icon.png" id="2_ujmh4"]
+
+[node name="CrossBtn" instance=ExtResource("1_6me35")]
+icon = ExtResource("2_ujmh4")
+script = ExtResource("2_ap3n4")
+
+[node name="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_ujmh4")
