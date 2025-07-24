@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://by3hb1aj7boq4"]
 
 [ext_resource type="Script" uid="uid://d1mh8pbgfhtcg" path="res://logica.gd" id="1_wtcfe"]
-[ext_resource type="Texture2D" uid="uid://dgolodmxw5to7" path="res://icon.svg" id="2_0e48y"]
+[ext_resource type="PackedScene" uid="uid://sa30f05qlxjv" path="res://componentes/botones/triangle_btn/triangle_btn.tscn" id="2_0e48y"]
 
 [node name="Node2D" type="Control"]
 layout_mode = 3
@@ -13,6 +13,7 @@ grow_vertical = 2
 script = ExtResource("1_wtcfe")
 
 [node name="GridContainer" type="GridContainer" parent="."]
+custom_minimum_size = Vector2(128, 128)
 layout_mode = 1
 anchors_preset = 8
 anchor_left = 0.5
@@ -25,40 +26,57 @@ offset_right = 20.0
 offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
-columns = 3
 
-[node name="Button0" type="Button" parent="GridContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button1" type="Button" parent="GridContainer"]
+[node name="TriangleBtn" parent="GridContainer/HBoxContainer" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button2" type="Button" parent="GridContainer"]
+[node name="TriangleBtn2" parent="GridContainer/HBoxContainer" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button3" type="Button" parent="GridContainer"]
+[node name="TriangleBtn3" parent="GridContainer/HBoxContainer" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button4" type="Button" parent="GridContainer"]
+[node name="TriangleBtn4" parent="GridContainer/HBoxContainer" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button5" type="Button" parent="GridContainer"]
+[node name="TriangleBtn5" parent="GridContainer/HBoxContainer" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button6" type="Button" parent="GridContainer"]
+[node name="HBoxContainer2" type="HBoxContainer" parent="GridContainer"]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button7" type="Button" parent="GridContainer"]
+[node name="TriangleBtn" parent="GridContainer/HBoxContainer2" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
 
-[node name="Button8" type="Button" parent="GridContainer"]
+[node name="TriangleBtn2" parent="GridContainer/HBoxContainer2" instance=ExtResource("2_0e48y")]
 layout_mode = 2
-icon = ExtResource("2_0e48y")
+
+[node name="TriangleBtn3" parent="GridContainer/HBoxContainer2" instance=ExtResource("2_0e48y")]
+layout_mode = 2
+
+[node name="TriangleBtn4" parent="GridContainer/HBoxContainer2" instance=ExtResource("2_0e48y")]
+layout_mode = 2
+
+[node name="TriangleBtn5" parent="GridContainer/HBoxContainer2" instance=ExtResource("2_0e48y")]
+layout_mode = 2
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TriangleBtn" parent="GridContainer/HBoxContainer3" instance=ExtResource("2_0e48y")]
+layout_mode = 2
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TriangleBtn" parent="GridContainer/HBoxContainer4" instance=ExtResource("2_0e48y")]
+layout_mode = 2
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="GridContainer"]
+layout_mode = 2
+
+[node name="TriangleBtn" parent="GridContainer/HBoxContainer5" instance=ExtResource("2_0e48y")]
+layout_mode = 2

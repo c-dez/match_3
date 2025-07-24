@@ -3,8 +3,8 @@ extends Control
 
 # tablero representado por array bidimencional
 	
-var width = 3
 var height = 3
+var width = 3
 
 var circulo: Dictionary = {
 	'figura': 'circulo'
@@ -66,7 +66,7 @@ func check_match(_tablero):
 
 
 func populate_grid_container()->void:
-	# random
+	# la logica aqui esta usando un simple array de los childs de grid_container, la logica de detectar matches usa array bidimencional, corregir esta diferencia
 	var triangle:Resource = preload("res://componentes/botones/triangle_btn/triangle_btn.tscn")
 	var circle:Resource = preload("res://componentes/botones/circle_btn/circle_btn.tscn")
 	var cross:Resource = preload("res://componentes/botones/cross_btn/cross_btn.tscn")
